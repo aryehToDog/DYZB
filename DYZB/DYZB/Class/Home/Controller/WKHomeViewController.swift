@@ -48,10 +48,13 @@ class WKHomeViewController: UIViewController {
         //设置UI
         setupUI()
         
+        //成为代理
+        pageTitleView.delegate = self
+        pageContentView.delegate = self
+        
     }
     
 }
-
 
 // MARK: - 设置UI
 extension WKHomeViewController {
@@ -92,6 +95,9 @@ extension WKHomeViewController {
 }
 
 
+
+
+
 // MARK: - 状态栏按钮点击方法
 extension WKHomeViewController {
     
@@ -115,4 +121,25 @@ extension WKHomeViewController {
         print("didClickCqcoderItem")
     }
     
+}
+
+// MARK: - PageTitleViewDelegate
+extension WKHomeViewController: PageTitleViewDelegate {
+    
+    func pageTitleViewDidClickTitleLableIndex(pageTitleView: WKPageTitleView, selectIndex: Int) {
+        
+        pageContentView.didClickIndexToCollectionViewCell(index: selectIndex)
+    }
+    
+}
+
+
+// MARK: - PageContentViewDelegate
+extension WKHomeViewController: PageContentViewDelegate {
+
+    func pageContentViewDidScrollviewToContentTitleLable(pageContentView: WKPageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int) {
+        
+        pageTitleView.pageTitleViewContentIndexView(progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
+    }
+
 }
