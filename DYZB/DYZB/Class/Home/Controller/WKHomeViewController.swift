@@ -10,14 +10,36 @@ import UIKit
 
 class WKHomeViewController: UIViewController {
     
-    
-    
+    //懒加载pageTitleView
     lazy var pageTitleView: WKPageTitleView = {
     
         let pageTitleView = WKPageTitleView(frame: CGRect(x: 0, y: 64, width: WKWidth, height: 40), titles: ["推荐","游戏","娱乐","趣玩"])
         
         return pageTitleView
         
+    }()
+    
+    //懒加载
+    fileprivate lazy var pageContentView: WKPageContentView = {
+    
+        let pageContenViewF = CGRect(x: 0, y: 64 + 40, width: WKWidth, height: WKHeight - 64 - 40)
+        
+        var childsVc = [UIViewController]()
+        
+        //加载四个控制器
+        for _ in 0..<4 {
+            
+            let vc = UIViewController()
+            
+            vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(256)), g: CGFloat(arc4random_uniform(256)), b: CGFloat(arc4random_uniform(256)))
+//            vc.view.backgroundColor = UIColor.red
+            childsVc.append(vc)
+            
+        }
+        
+        let pageContentView = WKPageContentView(frame: pageContenViewF, childsVc:childsVc , parentVc: self)
+        
+        return pageContentView
     }()
     
     override func viewDidLoad() {
@@ -44,6 +66,10 @@ extension WKHomeViewController {
         //添加pageTitleView
         self.view.addSubview(pageTitleView)
 //        pageTitleView.backgroundColor = UIColor.red
+        
+        //添加pageContentView
+        self.view.addSubview(pageContentView)
+//        pageContentView.backgroundColor = UIColor.red
         
     }
     
