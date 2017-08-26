@@ -10,6 +10,16 @@ import UIKit
 
 class WKHomeViewController: UIViewController {
     
+    
+    
+    lazy var pageTitleView: WKPageTitleView = {
+    
+        let pageTitleView = WKPageTitleView(frame: CGRect(x: 0, y: 64, width: WKWidth, height: 40), titles: ["推荐","游戏","娱乐","趣玩"])
+        
+        return pageTitleView
+        
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,8 +36,15 @@ extension WKHomeViewController {
     
     fileprivate func setupUI() {
         
+        automaticallyAdjustsScrollViewInsets = false
+        
         //设置状态栏
         setupNavBar()
+        
+        //添加pageTitleView
+        self.view.addSubview(pageTitleView)
+//        pageTitleView.backgroundColor = UIColor.red
+        
     }
     
     func setupNavBar() {

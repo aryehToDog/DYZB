@@ -20,6 +20,8 @@
 		250917F21F500B870007F398 /* WKTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250917F11F500B870007F398 /* WKTabBarController.swift */; };
 		250917F41F5023220007F398 /* WKHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250917F31F5023220007F398 /* WKHomeViewController.swift */; };
 		250917F71F50269C0007F398 /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250917F61F50269C0007F398 /* UIBarButtonItem-Extension.swift */; };
+		250917F91F51767F0007F398 /* WKPageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250917F81F51767F0007F398 /* WKPageTitleView.swift */; };
+		250917FB1F5178540007F398 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250917FA1F5178540007F398 /* Common.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		250917F11F500B870007F398 /* WKTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKTabBarController.swift; sourceTree = "<group>"; };
 		250917F31F5023220007F398 /* WKHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKHomeViewController.swift; sourceTree = "<group>"; };
 		250917F61F50269C0007F398 /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
+		250917F81F51767F0007F398 /* WKPageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKPageTitleView.swift; sourceTree = "<group>"; };
+		250917FA1F5178540007F398 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,7 @@
 			children = (
 				250917CC1F5007930007F398 /* Class */,
 				2509179E1F5005A80007F398 /* AppDelegate.swift */,
+				250917FA1F5178540007F398 /* Common.swift */,
 				250917A51F5005A80007F398 /* Assets.xcassets */,
 				250917A71F5005A80007F398 /* LaunchScreen.storyboard */,
 				250917AA1F5005A80007F398 /* Info.plist */,
@@ -275,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				250917A21F5005A80007F398 /* Main.storyboard */,
+				250917F81F51767F0007F398 /* WKPageTitleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -494,8 +500,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				250917F41F5023220007F398 /* WKHomeViewController.swift in Sources */,
+				250917F91F51767F0007F398 /* WKPageTitleView.swift in Sources */,
 				2509179F1F5005A80007F398 /* AppDelegate.swift in Sources */,
 				250917F71F50269C0007F398 /* UIBarButtonItem-Extension.swift in Sources */,
+				250917FB1F5178540007F398 /* Common.swift in Sources */,
 				250917F21F500B870007F398 /* WKTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -752,6 +760,7 @@
 				250917C51F5005A80007F398 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		250917C61F5005A80007F398 /* Build configuration list for PBXNativeTarget "DYZBTests" */ = {
 			isa = XCConfigurationList;
@@ -760,6 +769,7 @@
 				250917C81F5005A80007F398 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		250917C91F5005A80007F398 /* Build configuration list for PBXNativeTarget "DYZBUITests" */ = {
 			isa = XCConfigurationList;
@@ -768,6 +778,7 @@
 				250917CB1F5005A80007F398 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
