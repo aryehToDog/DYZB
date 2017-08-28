@@ -22,12 +22,16 @@ class WKHomeViewController: UIViewController {
     //懒加载
     fileprivate lazy var pageContentView: WKPageContentView = {
     
-        let pageContenViewF = CGRect(x: 0, y: 64 + 40, width: WKWidth, height: WKHeight - 64 - 40)
+        let pageContenViewF = CGRect(x: 0, y: 64 + 40, width: WKWidth, height: WKHeight - 64 - 40 - 44)
         
         var childsVc = [UIViewController]()
         
+        //创建推荐控制器
+        let recommendVc = WKRecommendController()
+        childsVc.append(recommendVc)
+        
         //加载四个控制器
-        for _ in 0..<4 {
+        for _ in 0..<3 {
             
             let vc = UIViewController()
             
