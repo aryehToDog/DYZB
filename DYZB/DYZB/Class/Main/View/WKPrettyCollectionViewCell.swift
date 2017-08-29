@@ -8,11 +8,22 @@
 
 import UIKit
 
-class WKPrettyCollectionViewCell: UICollectionViewCell {
+class WKPrettyCollectionViewCell: WKBaseCollectionViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+
+    @IBOutlet weak var cityBtn: UIButton!
+    
+    override var anchorModel: WKAnchorModel? {
+        
+        didSet {
+            
+            super.anchorModel = anchorModel
+            
+            self.cityBtn.setTitle(anchorModel?.anchor_city, for: .normal)
+            
+
+            
+        }
     }
 
 }

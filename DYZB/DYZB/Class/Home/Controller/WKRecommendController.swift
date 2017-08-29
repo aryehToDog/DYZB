@@ -25,6 +25,8 @@ private let kPerttyItemH: CGFloat = kItemwW * (4 / 3)
 
 class WKRecommendController: UIViewController {
     
+    fileprivate lazy var recommerndVM = WKRecommendViewModel()
+    
     //懒加载一个collection
     fileprivate lazy var collectionView: UICollectionView = {
         
@@ -56,10 +58,20 @@ class WKRecommendController: UIViewController {
         return collectionView
     }()
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
+        
+        //发送请求 更新数据
+        
+        recommerndVM.loadData {
+            self.collectionView.reloadData()
+        }
+        
+        
     }
     
 }
@@ -82,50 +94,60 @@ extension WKRecommendController: UICollectionViewDataSource, UICollectionViewDel
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         
-        return 12
+        return recommerndVM.modelArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        if section == 1 {
-            return 8
-        }else {
+        let modelGroup = recommerndVM.modelArray[section]
         
-            return 4
-        }
+        return modelGroup.anchors.count
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
+        let cell: WKBaseCollectionViewCell
+        
+        
         if indexPath.section == 1 {
             
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPerttyItemCell, for: indexPath)
-
-            return cell
-        } else {
-        
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalItemCell, for: indexPath)
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPerttyItemCell, for: indexPath) as! WKPrettyCollectionViewCell
             
-            return cell
-        }
-        
 
+        } else {
+            
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalItemCell, for: indexPath)
+                as! WKNormalCollectionViewCell
+            
+        }
+        let modelGroup = recommerndVM.modelArray[indexPath.section]
+        
+        cell.anchorModel = modelGroup.anchors[indexPath.item]
+        
+        return cell
+        
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
-        let cell = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kReusableView, for: indexPath)
+        let cell = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kReusableView, for: indexPath) as! WKReusableView
+        
+        let modelGroup = recommerndVM.modelArray[indexPath.section]
+        
+        cell.anchorM = modelGroup
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    
-        if indexPath.section == 1 {
         
+        if indexPath.section == 1 {
+            
             return CGSize(width: kItemwW, height: kPerttyItemH)
         }else {
-        
+            
             return CGSize(width: kItemwW, height: kNormalItemH)
         }
     }

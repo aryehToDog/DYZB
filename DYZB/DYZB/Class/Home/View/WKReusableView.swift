@@ -10,9 +10,21 @@ import UIKit
 
 class WKReusableView: UICollectionReusableView {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var iconView: UIImageView!
+
+    @IBOutlet weak var nickNameLable: UILabel!
+    
+    
+    var anchorM: WKAnchorGroup? {
+    
+        didSet {
+    
+            self.iconView.image = UIImage(named: (anchorM?.icon_name ?? ""))
+            
+            self.nickNameLable.text = anchorM?.tag_name
     }
+    
+    }
+    
     
 }

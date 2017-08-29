@@ -32,6 +32,12 @@
 		250D2C391F541E1E001E7C1C /* WKNormalCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 250D2C371F541E1E001E7C1C /* WKNormalCollectionViewCell.xib */; };
 		250D2C3C1F542256001E7C1C /* WKPrettyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D2C3A1F542256001E7C1C /* WKPrettyCollectionViewCell.swift */; };
 		250D2C3D1F542256001E7C1C /* WKPrettyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 250D2C3B1F542256001E7C1C /* WKPrettyCollectionViewCell.xib */; };
+		25C0829C1F556FD400FDB253 /* WKNetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0829B1F556FD400FDB253 /* WKNetworkTools.swift */; };
+		25C0829F1F5573CF00FDB253 /* WKRecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0829E1F5573CF00FDB253 /* WKRecommendViewModel.swift */; };
+		25C082A31F55768100FDB253 /* NSdate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C082A21F55768100FDB253 /* NSdate+Extension.swift */; };
+		25C082A51F55795E00FDB253 /* WKAnchorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C082A41F55795E00FDB253 /* WKAnchorGroup.swift */; };
+		25C082A71F55796A00FDB253 /* WKAnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C082A61F55796A00FDB253 /* WKAnchorModel.swift */; };
+		25C082A91F559D0700FDB253 /* WKBaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C082A81F559D0700FDB253 /* WKBaseCollectionViewCell.swift */; };
 		2CDA28F75C38A9AB0D656886 /* Pods_DYZBUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FDB829B05CC07031D348FB1 /* Pods_DYZBUITests.framework */; };
 		5218F502C8734690CD6EDCAF /* Pods_DYZBTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 201F41608AA9E33DCF679442 /* Pods_DYZBTests.framework */; };
 /* End PBXBuildFile section */
@@ -85,6 +91,12 @@
 		250D2C371F541E1E001E7C1C /* WKNormalCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WKNormalCollectionViewCell.xib; sourceTree = "<group>"; };
 		250D2C3A1F542256001E7C1C /* WKPrettyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKPrettyCollectionViewCell.swift; sourceTree = "<group>"; };
 		250D2C3B1F542256001E7C1C /* WKPrettyCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WKPrettyCollectionViewCell.xib; sourceTree = "<group>"; };
+		25C0829B1F556FD400FDB253 /* WKNetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WKNetworkTools.swift; path = Class/Tools/WKNetworkTools.swift; sourceTree = "<group>"; };
+		25C0829E1F5573CF00FDB253 /* WKRecommendViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKRecommendViewModel.swift; sourceTree = "<group>"; };
+		25C082A21F55768100FDB253 /* NSdate+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSdate+Extension.swift"; sourceTree = "<group>"; };
+		25C082A41F55795E00FDB253 /* WKAnchorGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKAnchorGroup.swift; sourceTree = "<group>"; };
+		25C082A61F55796A00FDB253 /* WKAnchorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKAnchorModel.swift; sourceTree = "<group>"; };
+		25C082A81F559D0700FDB253 /* WKBaseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKBaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		265339613D4786661713FD63 /* Pods_DYZB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DYZB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FDB829B05CC07031D348FB1 /* Pods_DYZBUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DYZBUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		80B2BB94B0E359FEDF68BBF7 /* Pods-DYZB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYZB.release.xcconfig"; path = "Pods/Target Support Files/Pods-DYZB/Pods-DYZB.release.xcconfig"; sourceTree = "<group>"; };
@@ -150,6 +162,7 @@
 			children = (
 				250917CC1F5007930007F398 /* Class */,
 				2509179E1F5005A80007F398 /* AppDelegate.swift */,
+				25C0829B1F556FD400FDB253 /* WKNetworkTools.swift */,
 				250917FA1F5178540007F398 /* Common.swift */,
 				250917A51F5005A80007F398 /* Assets.xcassets */,
 				250917A71F5005A80007F398 /* LaunchScreen.storyboard */,
@@ -224,6 +237,7 @@
 		250917D11F5007930007F398 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				25C0829D1F55737000FDB253 /* ViewModel */,
 				250917D21F5007930007F398 /* Controller */,
 				250917D31F5007930007F398 /* Model */,
 				250917D41F5007930007F398 /* View */,
@@ -310,6 +324,8 @@
 		250917DB1F5007930007F398 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				25C082A41F55795E00FDB253 /* WKAnchorGroup.swift */,
+				25C082A61F55796A00FDB253 /* WKAnchorModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -324,6 +340,7 @@
 				250D2C371F541E1E001E7C1C /* WKNormalCollectionViewCell.xib */,
 				250D2C3A1F542256001E7C1C /* WKPrettyCollectionViewCell.swift */,
 				250D2C3B1F542256001E7C1C /* WKPrettyCollectionViewCell.xib */,
+				25C082A81F559D0700FDB253 /* WKBaseCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -397,8 +414,17 @@
 			children = (
 				250917F61F50269C0007F398 /* UIBarButtonItem-Extension.swift */,
 				250917FE1F51D60D0007F398 /* UIColor+Extension.swift */,
+				25C082A21F55768100FDB253 /* NSdate+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		25C0829D1F55737000FDB253 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				25C0829E1F5573CF00FDB253 /* WKRecommendViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		427D24CA8ABBE49538949A91 /* Pods */ = {
@@ -718,16 +744,22 @@
 			files = (
 				250D2C3C1F542256001E7C1C /* WKPrettyCollectionViewCell.swift in Sources */,
 				250917F41F5023220007F398 /* WKHomeViewController.swift in Sources */,
+				25C0829C1F556FD400FDB253 /* WKNetworkTools.swift in Sources */,
 				250917F91F51767F0007F398 /* WKPageTitleView.swift in Sources */,
 				2509179F1F5005A80007F398 /* AppDelegate.swift in Sources */,
+				25C082A31F55768100FDB253 /* NSdate+Extension.swift in Sources */,
+				25C082A71F55796A00FDB253 /* WKAnchorModel.swift in Sources */,
 				250D2C341F541AE6001E7C1C /* WKReusableView.swift in Sources */,
 				250917FD1F51889F0007F398 /* WKPageContentView.swift in Sources */,
+				25C082A51F55795E00FDB253 /* WKAnchorGroup.swift in Sources */,
 				250917F71F50269C0007F398 /* UIBarButtonItem-Extension.swift in Sources */,
 				250D2C381F541E1E001E7C1C /* WKNormalCollectionViewCell.swift in Sources */,
 				250D2C311F5411C0001E7C1C /* WKRecommendController.swift in Sources */,
 				250917FB1F5178540007F398 /* Common.swift in Sources */,
+				25C0829F1F5573CF00FDB253 /* WKRecommendViewModel.swift in Sources */,
 				250917F21F500B870007F398 /* WKTabBarController.swift in Sources */,
 				250917FF1F51D60D0007F398 /* UIColor+Extension.swift in Sources */,
+				25C082A91F559D0700FDB253 /* WKBaseCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

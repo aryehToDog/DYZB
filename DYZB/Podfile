@@ -5,6 +5,7 @@
 target 'DYZB' do
 
 pod 'Alamofire'
+pod 'Kingfisher'
 
   # Pods for DYZB
 
