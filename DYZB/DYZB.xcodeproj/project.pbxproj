@@ -32,6 +32,11 @@
 		250D2C391F541E1E001E7C1C /* WKNormalCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 250D2C371F541E1E001E7C1C /* WKNormalCollectionViewCell.xib */; };
 		250D2C3C1F542256001E7C1C /* WKPrettyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D2C3A1F542256001E7C1C /* WKPrettyCollectionViewCell.swift */; };
 		250D2C3D1F542256001E7C1C /* WKPrettyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 250D2C3B1F542256001E7C1C /* WKPrettyCollectionViewCell.xib */; };
+		25652B981F56BCF00047A3CB /* WKCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25652B971F56BCF00047A3CB /* WKCycleView.swift */; };
+		25652B9A1F56BD170047A3CB /* WKCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25652B991F56BD170047A3CB /* WKCycleView.xib */; };
+		25652B9D1F56C3C10047A3CB /* WKCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25652B9B1F56C3C10047A3CB /* WKCycleCell.swift */; };
+		25652B9E1F56C3C10047A3CB /* WKCycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25652B9C1F56C3C10047A3CB /* WKCycleCell.xib */; };
+		25652BA01F56C5940047A3CB /* WKCycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25652B9F1F56C5940047A3CB /* WKCycleModel.swift */; };
 		25C0829C1F556FD400FDB253 /* WKNetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0829B1F556FD400FDB253 /* WKNetworkTools.swift */; };
 		25C0829F1F5573CF00FDB253 /* WKRecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0829E1F5573CF00FDB253 /* WKRecommendViewModel.swift */; };
 		25C082A31F55768100FDB253 /* NSdate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C082A21F55768100FDB253 /* NSdate+Extension.swift */; };
@@ -91,6 +96,11 @@
 		250D2C371F541E1E001E7C1C /* WKNormalCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WKNormalCollectionViewCell.xib; sourceTree = "<group>"; };
 		250D2C3A1F542256001E7C1C /* WKPrettyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKPrettyCollectionViewCell.swift; sourceTree = "<group>"; };
 		250D2C3B1F542256001E7C1C /* WKPrettyCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WKPrettyCollectionViewCell.xib; sourceTree = "<group>"; };
+		25652B971F56BCF00047A3CB /* WKCycleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKCycleView.swift; sourceTree = "<group>"; };
+		25652B991F56BD170047A3CB /* WKCycleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WKCycleView.xib; sourceTree = "<group>"; };
+		25652B9B1F56C3C10047A3CB /* WKCycleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKCycleCell.swift; sourceTree = "<group>"; };
+		25652B9C1F56C3C10047A3CB /* WKCycleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WKCycleCell.xib; sourceTree = "<group>"; };
+		25652B9F1F56C5940047A3CB /* WKCycleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKCycleModel.swift; sourceTree = "<group>"; };
 		25C0829B1F556FD400FDB253 /* WKNetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WKNetworkTools.swift; path = Class/Tools/WKNetworkTools.swift; sourceTree = "<group>"; };
 		25C0829E1F5573CF00FDB253 /* WKRecommendViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKRecommendViewModel.swift; sourceTree = "<group>"; };
 		25C082A21F55768100FDB253 /* NSdate+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSdate+Extension.swift"; sourceTree = "<group>"; };
@@ -257,6 +267,7 @@
 		250917D31F5007930007F398 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				25652B9F1F56C5940047A3CB /* WKCycleModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -267,6 +278,10 @@
 				250917E91F500A7E0007F398 /* Home.storyboard */,
 				250D2C321F541AE6001E7C1C /* WKReusableView.swift */,
 				250D2C331F541AE6001E7C1C /* WKReusableView.xib */,
+				25652B971F56BCF00047A3CB /* WKCycleView.swift */,
+				25652B991F56BD170047A3CB /* WKCycleView.xib */,
+				25652B9B1F56C3C10047A3CB /* WKCycleCell.swift */,
+				25652B9C1F56C3C10047A3CB /* WKCycleCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -574,11 +589,13 @@
 				250917A61F5005A80007F398 /* Assets.xcassets in Resources */,
 				250D2C3D1F542256001E7C1C /* WKPrettyCollectionViewCell.xib in Resources */,
 				250917A41F5005A80007F398 /* Main.storyboard in Resources */,
+				25652B9A1F56BD170047A3CB /* WKCycleView.xib in Resources */,
 				250D2C351F541AE6001E7C1C /* WKReusableView.xib in Resources */,
 				250917EC1F500AD00007F398 /* Live.storyboard in Resources */,
 				250917EA1F500A7E0007F398 /* Home.storyboard in Resources */,
 				250917F01F500B420007F398 /* Profile.storyboard in Resources */,
 				250D2C391F541E1E001E7C1C /* WKNormalCollectionViewCell.xib in Resources */,
+				25652B9E1F56C3C10047A3CB /* WKCycleCell.xib in Resources */,
 				250917EE1F500AF20007F398 /* Follow.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -748,10 +765,13 @@
 				250917F91F51767F0007F398 /* WKPageTitleView.swift in Sources */,
 				2509179F1F5005A80007F398 /* AppDelegate.swift in Sources */,
 				25C082A31F55768100FDB253 /* NSdate+Extension.swift in Sources */,
+				25652B9D1F56C3C10047A3CB /* WKCycleCell.swift in Sources */,
 				25C082A71F55796A00FDB253 /* WKAnchorModel.swift in Sources */,
+				25652B981F56BCF00047A3CB /* WKCycleView.swift in Sources */,
 				250D2C341F541AE6001E7C1C /* WKReusableView.swift in Sources */,
 				250917FD1F51889F0007F398 /* WKPageContentView.swift in Sources */,
 				25C082A51F55795E00FDB253 /* WKAnchorGroup.swift in Sources */,
+				25652BA01F56C5940047A3CB /* WKCycleModel.swift in Sources */,
 				250917F71F50269C0007F398 /* UIBarButtonItem-Extension.swift in Sources */,
 				250D2C381F541E1E001E7C1C /* WKNormalCollectionViewCell.swift in Sources */,
 				250D2C311F5411C0001E7C1C /* WKRecommendController.swift in Sources */,

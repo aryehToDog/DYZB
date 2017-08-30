@@ -98,10 +98,6 @@ extension WKHomeViewController {
     
 }
 
-
-
-
-
 // MARK: - 状态栏按钮点击方法
 extension WKHomeViewController {
     
@@ -136,7 +132,6 @@ extension WKHomeViewController: PageTitleViewDelegate {
     }
     
 }
-
 
 // MARK: - PageContentViewDelegate
 extension WKHomeViewController: PageContentViewDelegate {

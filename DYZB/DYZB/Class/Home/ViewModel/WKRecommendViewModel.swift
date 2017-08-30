@@ -10,6 +10,9 @@ import UIKit
 
 class WKRecommendViewModel: NSObject {
     
+    //保存WKCycleModel 的数组
+    lazy var cycleModel: [WKCycleModel] = [WKCycleModel]()
+    
     //保存WKAnchorGroup 的数组
     lazy var modelArray: [WKAnchorGroup] = [WKAnchorGroup]()
     
@@ -31,8 +34,7 @@ extension WKRecommendViewModel {
                       "time" : NSDate.getCurrentTime()]
         
         let disPathGroup = DispatchGroup()
-        
-        
+    
         //发送网络数据
         //获取01组的数据
         
@@ -124,6 +126,32 @@ extension WKRecommendViewModel {
             
             finished()
         }
+        
+    }
+    
+    func loadCycleData(finished: @escaping () -> ()) {
+        
+        WKNetworkTools.requestData(url: "http://www.douyutv.com/api/v1/slide/6", type: .get, parame: ["version" : "2.300" as NSObject]) { (resulet) in
+            
+            guard let resulet = resulet as? [String: NSObject] else {
+            
+                return
+            }
+            
+            guard let dictArray = resulet["data"] as? [[String : NSObject]] else {
+            
+                return
+            }
+            
+            //字典转模型
+            for dict in dictArray {
+            
+                self.cycleModel.append(WKCycleModel(dict: dict))
+            }
+            
+            finished()
+        }
+        
         
     }
     

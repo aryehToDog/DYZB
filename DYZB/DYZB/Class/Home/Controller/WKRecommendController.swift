@@ -23,9 +23,19 @@ private let kItemwW: CGFloat = (WKWidth - 3 * kItemwMaragin) * 0.5
 private let kNormalItemH: CGFloat = kItemwW * (3 / 4)
 private let kPerttyItemH: CGFloat = kItemwW * (4 / 3)
 
+private let kCycleViewH: CGFloat = WKWidth * 3 / 8
+
 class WKRecommendController: UIViewController {
     
     fileprivate lazy var recommerndVM = WKRecommendViewModel()
+    
+    fileprivate lazy var cycleView: WKCycleView = {
+    
+        let cycleView = WKCycleView.cycleView()
+        
+        cycleView.frame = CGRect(x: 0, y: -kCycleViewH, width: WKWidth, height: kCycleViewH)
+        return cycleView
+    }()
     
     //懒加载一个collection
     fileprivate lazy var collectionView: UICollectionView = {
@@ -37,14 +47,11 @@ class WKRecommendController: UIViewController {
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = kItemwMaragin
         layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
-        
         //设置layout 的头部
-        
         let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
         
         collectionView.dataSource = self
         collectionView.delegate = self
-        
         collectionView.backgroundColor = UIColor.white
         //让view 自动跟随父控件进行宽跟高拉伸
         collectionView.autoresizingMask = [.flexibleHeight , .flexibleWidth]
@@ -55,10 +62,9 @@ class WKRecommendController: UIViewController {
         
         collectionView.register(UINib(nibName: "WKPrettyCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: kPerttyItemCell)
         
+        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH, left: 0, bottom: 0, right: 0)
         return collectionView
     }()
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,16 +72,17 @@ class WKRecommendController: UIViewController {
         setupUI()
         
         //发送请求 更新数据
-        
         recommerndVM.loadData {
             self.collectionView.reloadData()
         }
         
-        
+        recommerndVM.loadCycleData {
+            
+            //发送网络请求
+            self.cycleView.cycleModel = self.recommerndVM.cycleModel
+        }
     }
-    
 }
-
 
 // MARK: - 设置UI
 extension WKRecommendController {
@@ -84,10 +91,12 @@ extension WKRecommendController {
         
         view.addSubview(collectionView)
         
+        //添加cycleView
+        collectionView.addSubview(cycleView)
+        
     }
     
 }
-
 
 // MARK: - UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 extension WKRecommendController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -151,7 +160,5 @@ extension WKRecommendController: UICollectionViewDataSource, UICollectionViewDel
             return CGSize(width: kItemwW, height: kNormalItemH)
         }
     }
-    
-    
 }
 
