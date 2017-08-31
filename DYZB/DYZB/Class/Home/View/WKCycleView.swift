@@ -13,8 +13,7 @@ fileprivate let kCollectionViewId = "kCollectionViewId"
 class WKCycleView: UIView {
     
     var time :Timer?
-    
-    
+
     //定义模型属性
     var cycleModel: [WKCycleModel]? {
         

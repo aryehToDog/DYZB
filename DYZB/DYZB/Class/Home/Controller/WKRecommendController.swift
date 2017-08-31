@@ -25,6 +25,8 @@ private let kPerttyItemH: CGFloat = kItemwW * (4 / 3)
 
 private let kCycleViewH: CGFloat = WKWidth * 3 / 8
 
+private let kGameViewH: CGFloat = 90
+
 class WKRecommendController: UIViewController {
     
     fileprivate lazy var recommerndVM = WKRecommendViewModel()
@@ -33,8 +35,16 @@ class WKRecommendController: UIViewController {
     
         let cycleView = WKCycleView.cycleView()
         
-        cycleView.frame = CGRect(x: 0, y: -kCycleViewH, width: WKWidth, height: kCycleViewH)
+        cycleView.frame = CGRect(x: 0, y: -(kCycleViewH + kGameViewH), width: WKWidth, height: kCycleViewH)
         return cycleView
+    }()
+    
+    fileprivate lazy var gameView: WKRecommendGanmeView = {
+        
+        let gameView = WKRecommendGanmeView.recommendGanmeView()
+        
+        gameView.frame = CGRect(x: 0, y: -kGameViewH, width: WKWidth, height: kGameViewH)
+        return gameView
     }()
     
     //懒加载一个collection
@@ -62,7 +72,7 @@ class WKRecommendController: UIViewController {
         
         collectionView.register(UINib(nibName: "WKPrettyCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: kPerttyItemCell)
         
-        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH, left: 0, bottom: 0, right: 0)
+        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH + kGameViewH, left: 0, bottom: 0, right: 0)
         return collectionView
     }()
     
@@ -74,6 +84,8 @@ class WKRecommendController: UIViewController {
         //发送请求 更新数据
         recommerndVM.loadData {
             self.collectionView.reloadData()
+            
+            self.gameView.groupModel = self.recommerndVM.modelArray
         }
         
         recommerndVM.loadCycleData {
@@ -94,6 +106,8 @@ extension WKRecommendController {
         //添加cycleView
         collectionView.addSubview(cycleView)
         
+        //添加gameView
+        collectionView.addSubview(gameView)
     }
     
 }
