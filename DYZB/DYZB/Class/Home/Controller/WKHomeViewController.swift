@@ -28,10 +28,11 @@ class WKHomeViewController: UIViewController {
         
         //创建推荐控制器
         let recommendVc = WKRecommendController()
+        let gameVc = WKGameViewController()
         childsVc.append(recommendVc)
-        
+        childsVc.append(gameVc)
         //加载四个控制器
-        for _ in 0..<3 {
+        for _ in 0..<2 {
             
             let vc = UIViewController()
             

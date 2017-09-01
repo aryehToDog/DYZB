@@ -15,20 +15,24 @@ class WKRecommendGanmeView: UIView {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-     var groupModel: [WKAnchorGroup]? {
+//    var gameModel: [WKGameModel]? {
+//        
+//        didSet {
+//            
+//            collectionView.reloadData()
+//            
+//        }
+//        
+//    }
+    
+    
+     var groupModel: [WKBaseGameModel]? {
     
         didSet {
         
             //刷新数据
             collectionView.reloadData()
-            
-            groupModel?.removeFirst()
-            groupModel?.removeFirst()
-            
-            let groupLastM = WKAnchorGroup()
-            groupLastM.tag_name = "更多"
-            groupLastM.icon_url = "home_more_btn"
-            groupModel?.append(groupLastM)
+
         }
     
     }

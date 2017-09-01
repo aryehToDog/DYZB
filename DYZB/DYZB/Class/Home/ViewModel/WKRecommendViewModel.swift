@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WKRecommendViewModel: NSObject {
+class WKRecommendViewModel {
     
     //保存WKCycleModel 的数组
     lazy var cycleModel: [WKCycleModel] = [WKCycleModel]()

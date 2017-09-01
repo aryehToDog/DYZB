@@ -47,6 +47,10 @@
 		25E3AE931F58182C008AA4F3 /* WKRecommendGanmeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25E3AE921F58182C008AA4F3 /* WKRecommendGanmeView.xib */; };
 		25E3AE961F581B38008AA4F3 /* WKGameViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E3AE941F581B38008AA4F3 /* WKGameViewCell.swift */; };
 		25E3AE971F581B38008AA4F3 /* WKGameViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25E3AE951F581B38008AA4F3 /* WKGameViewCell.xib */; };
+		25E3AE991F59610B008AA4F3 /* WKGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E3AE981F59610B008AA4F3 /* WKGameViewController.swift */; };
+		25E3AE9B1F59665E008AA4F3 /* WKGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E3AE9A1F59665E008AA4F3 /* WKGameModel.swift */; };
+		25E3AE9D1F5966E2008AA4F3 /* WKGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E3AE9C1F5966E2008AA4F3 /* WKGameViewModel.swift */; };
+		25E3AE9F1F5973F0008AA4F3 /* WKBaseGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E3AE9E1F5973F0008AA4F3 /* WKBaseGameModel.swift */; };
 		2CDA28F75C38A9AB0D656886 /* Pods_DYZBUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FDB829B05CC07031D348FB1 /* Pods_DYZBUITests.framework */; };
 		5218F502C8734690CD6EDCAF /* Pods_DYZBTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 201F41608AA9E33DCF679442 /* Pods_DYZBTests.framework */; };
 /* End PBXBuildFile section */
@@ -115,6 +119,10 @@
 		25E3AE921F58182C008AA4F3 /* WKRecommendGanmeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WKRecommendGanmeView.xib; sourceTree = "<group>"; };
 		25E3AE941F581B38008AA4F3 /* WKGameViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKGameViewCell.swift; sourceTree = "<group>"; };
 		25E3AE951F581B38008AA4F3 /* WKGameViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WKGameViewCell.xib; sourceTree = "<group>"; };
+		25E3AE981F59610B008AA4F3 /* WKGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKGameViewController.swift; sourceTree = "<group>"; };
+		25E3AE9A1F59665E008AA4F3 /* WKGameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKGameModel.swift; sourceTree = "<group>"; };
+		25E3AE9C1F5966E2008AA4F3 /* WKGameViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKGameViewModel.swift; sourceTree = "<group>"; };
+		25E3AE9E1F5973F0008AA4F3 /* WKBaseGameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKBaseGameModel.swift; sourceTree = "<group>"; };
 		265339613D4786661713FD63 /* Pods_DYZB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DYZB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FDB829B05CC07031D348FB1 /* Pods_DYZBUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DYZBUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		80B2BB94B0E359FEDF68BBF7 /* Pods-DYZB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYZB.release.xcconfig"; path = "Pods/Target Support Files/Pods-DYZB/Pods-DYZB.release.xcconfig"; sourceTree = "<group>"; };
@@ -268,6 +276,7 @@
 			children = (
 				250917F31F5023220007F398 /* WKHomeViewController.swift */,
 				250D2C301F5411C0001E7C1C /* WKRecommendController.swift */,
+				25E3AE981F59610B008AA4F3 /* WKGameViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -276,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				25652B9F1F56C5940047A3CB /* WKCycleModel.swift */,
+				25E3AE9A1F59665E008AA4F3 /* WKGameModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -353,6 +363,7 @@
 			children = (
 				25C082A41F55795E00FDB253 /* WKAnchorGroup.swift */,
 				25C082A61F55796A00FDB253 /* WKAnchorModel.swift */,
+				25E3AE9E1F5973F0008AA4F3 /* WKBaseGameModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -450,6 +461,7 @@
 			isa = PBXGroup;
 			children = (
 				25C0829E1F5573CF00FDB253 /* WKRecommendViewModel.swift */,
+				25E3AE9C1F5966E2008AA4F3 /* WKGameViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -773,6 +785,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25E3AE991F59610B008AA4F3 /* WKGameViewController.swift in Sources */,
 				250D2C3C1F542256001E7C1C /* WKPrettyCollectionViewCell.swift in Sources */,
 				250917F41F5023220007F398 /* WKHomeViewController.swift in Sources */,
 				25E3AE961F581B38008AA4F3 /* WKGameViewCell.swift in Sources */,
@@ -780,6 +793,7 @@
 				250917F91F51767F0007F398 /* WKPageTitleView.swift in Sources */,
 				2509179F1F5005A80007F398 /* AppDelegate.swift in Sources */,
 				25C082A31F55768100FDB253 /* NSdate+Extension.swift in Sources */,
+				25E3AE9F1F5973F0008AA4F3 /* WKBaseGameModel.swift in Sources */,
 				25E3AE911F581823008AA4F3 /* WKRecommendGanmeView.swift in Sources */,
 				25652B9D1F56C3C10047A3CB /* WKCycleCell.swift in Sources */,
 				25C082A71F55796A00FDB253 /* WKAnchorModel.swift in Sources */,
@@ -788,9 +802,11 @@
 				250917FD1F51889F0007F398 /* WKPageContentView.swift in Sources */,
 				25C082A51F55795E00FDB253 /* WKAnchorGroup.swift in Sources */,
 				25652BA01F56C5940047A3CB /* WKCycleModel.swift in Sources */,
+				25E3AE9B1F59665E008AA4F3 /* WKGameModel.swift in Sources */,
 				250917F71F50269C0007F398 /* UIBarButtonItem-Extension.swift in Sources */,
 				250D2C381F541E1E001E7C1C /* WKNormalCollectionViewCell.swift in Sources */,
 				250D2C311F5411C0001E7C1C /* WKRecommendController.swift in Sources */,
+				25E3AE9D1F5966E2008AA4F3 /* WKGameViewModel.swift in Sources */,
 				250917FB1F5178540007F398 /* Common.swift in Sources */,
 				25C0829F1F5573CF00FDB253 /* WKRecommendViewModel.swift in Sources */,
 				250917F21F500B870007F398 /* WKTabBarController.swift in Sources */,

@@ -16,7 +16,7 @@ enum MethodType {
 
 class WKNetworkTools: NSObject {
 
-    class func requestData(url: String, type:MethodType, parame: [String: NSObject]?, finished: @escaping (_ result: Any) -> ()) {
+    class func requestData(url: String, type:MethodType, parame: [String: Any]?, finished: @escaping (_ result: Any) -> ()) {
     
         let method = type == .get ? HTTPMethod.get : HTTPMethod.post
         

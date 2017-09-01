@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WKAnchorGroup: NSObject {
+class WKAnchorGroup: WKBaseGameModel {
     
     //保存WKAnchorModel 中的模型
     lazy var anchors: [WKAnchorModel] = [WKAnchorModel]()
@@ -27,28 +27,10 @@ class WKAnchorGroup: NSObject {
         
     }
     
-    // MARK:- 定义属性
-    var tag_name : String = ""
-    var icon_url : String = ""
     
     //组显示的标题
     var icon_name: String = "home_header_normal"
 
-    //字典转模型
-    override init() {
-        
-    }
-    
-     init(dict: [String: NSObject]) {
-        
-        super.init()
-        
-        setValuesForKeys(dict)
-    }
-    
-    override func setValue(_ value: Any?, forUndefinedKey key: String) {
-        
-    }
     
     
 }

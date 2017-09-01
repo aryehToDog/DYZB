@@ -32,7 +32,7 @@ class WKRecommendController: UIViewController {
     fileprivate lazy var recommerndVM = WKRecommendViewModel()
     
     fileprivate lazy var cycleView: WKCycleView = {
-    
+        
         let cycleView = WKCycleView.cycleView()
         
         cycleView.frame = CGRect(x: 0, y: -(kCycleViewH + kGameViewH), width: WKWidth, height: kCycleViewH)
@@ -85,7 +85,16 @@ class WKRecommendController: UIViewController {
         recommerndVM.loadData {
             self.collectionView.reloadData()
             
-            self.gameView.groupModel = self.recommerndVM.modelArray
+            var anchorGroup = self.recommerndVM.modelArray
+            anchorGroup.removeFirst()
+            anchorGroup.removeFirst()
+            
+            let groupLastM = WKAnchorGroup()
+            groupLastM.tag_name = "更多"
+            groupLastM.icon_url = "home_more_btn"
+            anchorGroup.append(groupLastM)
+            
+            self.gameView.groupModel = anchorGroup
         }
         
         recommerndVM.loadCycleData {
@@ -137,7 +146,7 @@ extension WKRecommendController: UICollectionViewDataSource, UICollectionViewDel
             
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPerttyItemCell, for: indexPath) as! WKPrettyCollectionViewCell
             
-
+            
         } else {
             
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalItemCell, for: indexPath)
