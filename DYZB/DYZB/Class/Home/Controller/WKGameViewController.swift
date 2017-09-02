@@ -15,7 +15,7 @@ private let kItemH : CGFloat = kItemW * 6 / 5
 private let kItemwGroupH: CGFloat = 50
 private let kGameViewH : CGFloat = 90
 private let gameViewCellID = "gameViewCellID"
-private let kReusableView = "kReusableView"
+//private let kReusableView = "kReusableView"
 
 class WKGameViewController: UIViewController {
     

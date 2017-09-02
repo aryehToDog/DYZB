@@ -8,26 +8,11 @@
 
 import UIKit
 
-private let kReusableView = "kReusableView"
-private let kNormalItemCell = "kNormalItemCell"
-private let kPerttyItemCell = "kPerttyItemCell"
-
-//layout 的头部高度
-private let kItemwGroupH: CGFloat = 50
-
-//item间距
-private let kItemwMaragin: CGFloat = 10
-//item宽度
-private let kItemwW: CGFloat = (WKWidth - 3 * kItemwMaragin) * 0.5
-
-private let kNormalItemH: CGFloat = kItemwW * (3 / 4)
-private let kPerttyItemH: CGFloat = kItemwW * (4 / 3)
-
 private let kCycleViewH: CGFloat = WKWidth * 3 / 8
 
 private let kGameViewH: CGFloat = 90
 
-class WKRecommendController: UIViewController {
+class WKRecommendController: WKBaseAnchorViewController {
     
     fileprivate lazy var recommerndVM = WKRecommendViewModel()
     
@@ -47,42 +32,34 @@ class WKRecommendController: UIViewController {
         return gameView
     }()
     
-    //懒加载一个collection
-    fileprivate lazy var collectionView: UICollectionView = {
+}
+
+// MARK: - 设置UI
+extension WKRecommendController {
+    
+    override func setupUI() {
         
-        let layout = UICollectionViewFlowLayout()
-        //设置基本属性
-        layout.itemSize = CGSize(width: kItemwW, height: kNormalItemH)
-        layout.headerReferenceSize = CGSize(width: WKWidth, height: kItemwGroupH)
-        layout.minimumLineSpacing = 0
-        layout.minimumInteritemSpacing = kItemwMaragin
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
-        //设置layout 的头部
-        let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
+        super.setupUI()
         
-        collectionView.dataSource = self
-        collectionView.delegate = self
-        collectionView.backgroundColor = UIColor.white
-        //让view 自动跟随父控件进行宽跟高拉伸
-        collectionView.autoresizingMask = [.flexibleHeight , .flexibleWidth]
+        //添加cycleView
+        collectionView.addSubview(cycleView)
         
-        collectionView.register(UINib(nibName: "WKReusableView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kReusableView)
-        
-        collectionView.register(UINib(nibName: "WKNormalCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: kNormalItemCell)
-        
-        collectionView.register(UINib(nibName: "WKPrettyCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: kPerttyItemCell)
+        //添加gameView
+        collectionView.addSubview(gameView)
         
         collectionView.contentInset = UIEdgeInsets(top: kCycleViewH + kGameViewH, left: 0, bottom: 0, right: 0)
-        return collectionView
-    }()
+    }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+}
+
+extension WKRecommendController {
+    
+    override func reloadData() {
         
-        setupUI()
-        
+        self.baseViewModel = self.recommerndVM
         //发送请求 更新数据
         recommerndVM.loadData {
+            
             self.collectionView.reloadData()
             
             var anchorGroup = self.recommerndVM.modelArray
@@ -102,75 +79,28 @@ class WKRecommendController: UIViewController {
             //发送网络请求
             self.cycleView.cycleModel = self.recommerndVM.cycleModel
         }
+        
     }
+    
 }
 
-// MARK: - 设置UI
 extension WKRecommendController {
     
-    fileprivate func setupUI() {
-        
-        view.addSubview(collectionView)
-        
-        //添加cycleView
-        collectionView.addSubview(cycleView)
-        
-        //添加gameView
-        collectionView.addSubview(gameView)
-    }
-    
-}
-
-// MARK: - UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
-extension WKRecommendController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        
-        return recommerndVM.modelArray.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        let modelGroup = recommerndVM.modelArray[section]
-        
-        return modelGroup.anchors.count
-        
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let cell: WKBaseCollectionViewCell
-        
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if indexPath.section == 1 {
             
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPerttyItemCell, for: indexPath) as! WKPrettyCollectionViewCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPerttyItemCell, for: indexPath) as! WKPrettyCollectionViewCell
+            let modelGroup = recommerndVM.modelArray[indexPath.section]
             
+            cell.anchorModel = modelGroup.anchors[indexPath.item]
+            
+            return cell
             
         } else {
-            
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalItemCell, for: indexPath)
-                as! WKNormalCollectionViewCell
-            
+               
+            return super.collectionView(collectionView, cellForItemAt: indexPath)
         }
-        let modelGroup = recommerndVM.modelArray[indexPath.section]
-        
-        cell.anchorModel = modelGroup.anchors[indexPath.item]
-        
-        return cell
-        
-        
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        
-        let cell = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kReusableView, for: indexPath) as! WKReusableView
-        
-        let modelGroup = recommerndVM.modelArray[indexPath.section]
-        
-        cell.anchorM = modelGroup
-        
-        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -183,5 +113,8 @@ extension WKRecommendController: UICollectionViewDataSource, UICollectionViewDel
             return CGSize(width: kItemwW, height: kNormalItemH)
         }
     }
+    
 }
+
+
 

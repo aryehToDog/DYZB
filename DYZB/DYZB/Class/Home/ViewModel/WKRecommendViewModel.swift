@@ -8,13 +8,10 @@
 
 import UIKit
 
-class WKRecommendViewModel {
+class WKRecommendViewModel: WKBaseAnchorViewModel {
     
     //保存WKCycleModel 的数组
     lazy var cycleModel: [WKCycleModel] = [WKCycleModel]()
-    
-    //保存WKAnchorGroup 的数组
-    lazy var modelArray: [WKAnchorGroup] = [WKAnchorGroup]()
     
     //保存颜值的模型
     var prettyAnchorGroup: WKAnchorGroup = WKAnchorGroup()
@@ -96,26 +93,9 @@ extension WKRecommendViewModel {
         //进入组
         disPathGroup.enter()
         
-        //获取2-12组的数据
-        WKNetworkTools.requestData(url: "http://capi.douyucdn.cn/api/v1/getHotCate", type: .get, parame: parame as [String : NSObject]) { (result) in
+        //获取2-12组的数据  http://capi.douyucdn.cn/api/v1/getHotCate
+        self.loadAnchorData(urlStr: "http://capi.douyucdn.cn/api/v1/getHotCate", parame: parame) {
             
-            guard let dictResult = result as? [String: NSObject] else {
-                
-                return
-            }
-            
-            guard let dictArray = dictResult["data"] as? [[String : NSObject]] else {
-                
-                return
-            }
-            
-            for dict in dictArray {
-                let anchorGroupModel = WKAnchorGroup(dict:dict)
-                
-                self.modelArray.append(anchorGroupModel)
-            }
-            
-            //离开
             disPathGroup.leave()
         }
         
