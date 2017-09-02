@@ -27,10 +27,6 @@ class WKAnchorGroup: WKBaseGameModel {
         
     }
     
-    
     //组显示的标题
     var icon_name: String = "home_header_normal"
-
-    
-    
 }

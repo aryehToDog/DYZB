@@ -29,19 +29,5 @@ class WKGameViewCell: UICollectionViewCell {
         }
     }
     
-//    var gameModel: WKGameModel? {
-//        
-//        didSet {
-//            
-//            self.titleLable.text = gameModel?.tag_name
-//            
-//            guard let urlS: URL = URL(string: gameModel?.icon_url ?? "") else {
-//                
-//                return
-//            }
-//            self.imageView.kf.setImage(with: urlS, placeholder: UIImage(named: "home_more_btn"))
-//            
-//        }
-//    }
     
 }

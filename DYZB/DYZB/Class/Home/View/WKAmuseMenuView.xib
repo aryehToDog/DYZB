@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="WKAmuseMenuView" customModule="DYZB" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="345" height="200"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="foW-Mf-huq">
+                    <rect key="frame" x="153" y="168" width="39" height="37"/>
+                    <color key="pageIndicatorTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="currentPageIndicatorTintColor" red="1" green="0.49606350240000002" blue="0.2922907475" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </pageControl>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="GUf-pw-TtP">
+                    <rect key="frame" x="0.0" y="0.0" width="345" height="173"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ur5-rH-J0M">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="GUf-pw-TtP" secondAttribute="trailing" id="CGs-gF-aTw"/>
+                <constraint firstItem="foW-Mf-huq" firstAttribute="top" secondItem="GUf-pw-TtP" secondAttribute="bottom" constant="-5" id="WAc-uA-krI"/>
+                <constraint firstAttribute="bottom" secondItem="foW-Mf-huq" secondAttribute="bottom" constant="-5" id="Wyu-E6-NRo"/>
+                <constraint firstItem="GUf-pw-TtP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ZCX-UI-lOJ"/>
+                <constraint firstItem="GUf-pw-TtP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="eJW-qh-sED"/>
+                <constraint firstItem="foW-Mf-huq" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="f56-pW-pyc"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="collectionView" destination="GUf-pw-TtP" id="gN2-vb-tpq"/>
+                <outlet property="pageControl" destination="foW-Mf-huq" id="cbl-iu-Evq"/>
+            </connections>
+            <point key="canvasLocation" x="-18" y="-191"/>
+        </view>
+    </objects>
+</document>

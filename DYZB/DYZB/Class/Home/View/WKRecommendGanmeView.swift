@@ -15,17 +15,6 @@ class WKRecommendGanmeView: UIView {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-//    var gameModel: [WKGameModel]? {
-//        
-//        didSet {
-//            
-//            collectionView.reloadData()
-//            
-//        }
-//        
-//    }
-    
-    
      var groupModel: [WKBaseGameModel]? {
     
         didSet {
