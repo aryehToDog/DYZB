@@ -30,7 +30,7 @@
         <!--首页-->
         <scene sceneID="NQY-Am-9Wf">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Mez-8v-xdd" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Mez-8v-xdd" customClass="WKHomeNavController" customModule="DYZB" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="首页" image="btn_home_normal" selectedImage="btn_home_selected" id="muD-YR-6XR"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>

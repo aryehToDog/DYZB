@@ -35,6 +35,9 @@
 		254A5EC51F5D2B8A006BE8A3 /* WKFunnyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254A5EC41F5D2B8A006BE8A3 /* WKFunnyViewController.swift */; };
 		254A5EC71F5D2C03006BE8A3 /* WKFunnyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254A5EC61F5D2C03006BE8A3 /* WKFunnyViewModel.swift */; };
 		254A5EC91F5D34D4006BE8A3 /* WKBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254A5EC81F5D34D4006BE8A3 /* WKBaseViewController.swift */; };
+		254A5ECB1F5D4307006BE8A3 /* WKRoomNorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254A5ECA1F5D4307006BE8A3 /* WKRoomNorViewController.swift */; };
+		254A5ECD1F5D4315006BE8A3 /* WKRoomShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254A5ECC1F5D4315006BE8A3 /* WKRoomShowViewController.swift */; };
+		254A5ECF1F5D476C006BE8A3 /* WKHomeNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254A5ECE1F5D476C006BE8A3 /* WKHomeNavController.swift */; };
 		25652B981F56BCF00047A3CB /* WKCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25652B971F56BCF00047A3CB /* WKCycleView.swift */; };
 		25652B9A1F56BD170047A3CB /* WKCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25652B991F56BD170047A3CB /* WKCycleView.xib */; };
 		25652B9D1F56C3C10047A3CB /* WKCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25652B9B1F56C3C10047A3CB /* WKCycleCell.swift */; };
@@ -118,6 +121,9 @@
 		254A5EC41F5D2B8A006BE8A3 /* WKFunnyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKFunnyViewController.swift; sourceTree = "<group>"; };
 		254A5EC61F5D2C03006BE8A3 /* WKFunnyViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKFunnyViewModel.swift; sourceTree = "<group>"; };
 		254A5EC81F5D34D4006BE8A3 /* WKBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKBaseViewController.swift; sourceTree = "<group>"; };
+		254A5ECA1F5D4307006BE8A3 /* WKRoomNorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKRoomNorViewController.swift; sourceTree = "<group>"; };
+		254A5ECC1F5D4315006BE8A3 /* WKRoomShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKRoomShowViewController.swift; sourceTree = "<group>"; };
+		254A5ECE1F5D476C006BE8A3 /* WKHomeNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKHomeNavController.swift; sourceTree = "<group>"; };
 		25652B971F56BCF00047A3CB /* WKCycleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKCycleView.swift; sourceTree = "<group>"; };
 		25652B991F56BD170047A3CB /* WKCycleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WKCycleView.xib; sourceTree = "<group>"; };
 		25652B9B1F56C3C10047A3CB /* WKCycleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKCycleCell.swift; sourceTree = "<group>"; };
@@ -301,6 +307,9 @@
 				25E3AE981F59610B008AA4F3 /* WKGameViewController.swift */,
 				25E3AEA01F5B1080008AA4F3 /* WKAmuseViewController.swift */,
 				254A5EC41F5D2B8A006BE8A3 /* WKFunnyViewController.swift */,
+				254A5ECA1F5D4307006BE8A3 /* WKRoomNorViewController.swift */,
+				254A5ECC1F5D4315006BE8A3 /* WKRoomShowViewController.swift */,
+				254A5ECE1F5D476C006BE8A3 /* WKHomeNavController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -851,8 +860,11 @@
 				25C082A51F55795E00FDB253 /* WKAnchorGroup.swift in Sources */,
 				25652BA01F56C5940047A3CB /* WKCycleModel.swift in Sources */,
 				254A5EC51F5D2B8A006BE8A3 /* WKFunnyViewController.swift in Sources */,
+				254A5ECF1F5D476C006BE8A3 /* WKHomeNavController.swift in Sources */,
 				25E3AE9B1F59665E008AA4F3 /* WKGameModel.swift in Sources */,
 				250917F71F50269C0007F398 /* UIBarButtonItem-Extension.swift in Sources */,
+				254A5ECB1F5D4307006BE8A3 /* WKRoomNorViewController.swift in Sources */,
+				254A5ECD1F5D4315006BE8A3 /* WKRoomShowViewController.swift in Sources */,
 				250D2C381F541E1E001E7C1C /* WKNormalCollectionViewCell.swift in Sources */,
 				250D2C311F5411C0001E7C1C /* WKRecommendController.swift in Sources */,
 				25E3AE9D1F5966E2008AA4F3 /* WKGameViewModel.swift in Sources */,

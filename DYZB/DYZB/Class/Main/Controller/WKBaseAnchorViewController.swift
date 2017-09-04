@@ -123,5 +123,26 @@ extension WKBaseAnchorViewController: UICollectionViewDataSource, UICollectionVi
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let isVertical = baseViewModel.modelArray[indexPath.section].anchors[indexPath.item].isVertical
+        
+        //0 : 电脑直播(普通房间) 1 : 手机直播(秀场房间)
+        if isVertical == 0 {
+            
+            let roomNorVc = WKRoomNorViewController()
+            navigationController?.pushViewController(roomNorVc, animated: true)
+            
+        }else {
+        
+            let roomShowVc = WKRoomShowViewController()
+            present(roomShowVc, animated: true, completion: nil)
+            
+        }
+        
+        
+    }
+    
 }
 
