@@ -8,14 +8,14 @@
 
 import UIKit
 
-class WKRoomNorViewController: UIViewController,UIGestureRecognizerDelegate {
+class WKRoomNorViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = UIColor.orange
         
-        navigationController?.interactivePopGestureRecognizer?.delegate = self
+//        navigationController?.interactivePopGestureRecognizer?.delegate = self
         
     }
 
