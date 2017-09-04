@@ -32,6 +32,8 @@
 		250D2C391F541E1E001E7C1C /* WKNormalCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 250D2C371F541E1E001E7C1C /* WKNormalCollectionViewCell.xib */; };
 		250D2C3C1F542256001E7C1C /* WKPrettyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D2C3A1F542256001E7C1C /* WKPrettyCollectionViewCell.swift */; };
 		250D2C3D1F542256001E7C1C /* WKPrettyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 250D2C3B1F542256001E7C1C /* WKPrettyCollectionViewCell.xib */; };
+		254A5EC51F5D2B8A006BE8A3 /* WKFunnyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254A5EC41F5D2B8A006BE8A3 /* WKFunnyViewController.swift */; };
+		254A5EC71F5D2C03006BE8A3 /* WKFunnyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254A5EC61F5D2C03006BE8A3 /* WKFunnyViewModel.swift */; };
 		25652B981F56BCF00047A3CB /* WKCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25652B971F56BCF00047A3CB /* WKCycleView.swift */; };
 		25652B9A1F56BD170047A3CB /* WKCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25652B991F56BD170047A3CB /* WKCycleView.xib */; };
 		25652B9D1F56C3C10047A3CB /* WKCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25652B9B1F56C3C10047A3CB /* WKCycleCell.swift */; };
@@ -112,6 +114,8 @@
 		250D2C371F541E1E001E7C1C /* WKNormalCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WKNormalCollectionViewCell.xib; sourceTree = "<group>"; };
 		250D2C3A1F542256001E7C1C /* WKPrettyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKPrettyCollectionViewCell.swift; sourceTree = "<group>"; };
 		250D2C3B1F542256001E7C1C /* WKPrettyCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WKPrettyCollectionViewCell.xib; sourceTree = "<group>"; };
+		254A5EC41F5D2B8A006BE8A3 /* WKFunnyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKFunnyViewController.swift; sourceTree = "<group>"; };
+		254A5EC61F5D2C03006BE8A3 /* WKFunnyViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKFunnyViewModel.swift; sourceTree = "<group>"; };
 		25652B971F56BCF00047A3CB /* WKCycleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKCycleView.swift; sourceTree = "<group>"; };
 		25652B991F56BD170047A3CB /* WKCycleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WKCycleView.xib; sourceTree = "<group>"; };
 		25652B9B1F56C3C10047A3CB /* WKCycleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKCycleCell.swift; sourceTree = "<group>"; };
@@ -294,6 +298,7 @@
 				250D2C301F5411C0001E7C1C /* WKRecommendController.swift */,
 				25E3AE981F59610B008AA4F3 /* WKGameViewController.swift */,
 				25E3AEA01F5B1080008AA4F3 /* WKAmuseViewController.swift */,
+				254A5EC41F5D2B8A006BE8A3 /* WKFunnyViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -486,6 +491,7 @@
 				25C0829E1F5573CF00FDB253 /* WKRecommendViewModel.swift */,
 				25E3AE9C1F5966E2008AA4F3 /* WKGameViewModel.swift */,
 				25E3AEA61F5B1327008AA4F3 /* WKAmuseViewModel.swift */,
+				254A5EC61F5D2C03006BE8A3 /* WKFunnyViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -826,6 +832,7 @@
 				25C0829C1F556FD400FDB253 /* WKNetworkTools.swift in Sources */,
 				250917F91F51767F0007F398 /* WKPageTitleView.swift in Sources */,
 				25E3AEA71F5B1327008AA4F3 /* WKAmuseViewModel.swift in Sources */,
+				254A5EC71F5D2C03006BE8A3 /* WKFunnyViewModel.swift in Sources */,
 				25E3AEA11F5B1080008AA4F3 /* WKAmuseViewController.swift in Sources */,
 				2509179F1F5005A80007F398 /* AppDelegate.swift in Sources */,
 				25C082A31F55768100FDB253 /* NSdate+Extension.swift in Sources */,
@@ -840,6 +847,7 @@
 				250917FD1F51889F0007F398 /* WKPageContentView.swift in Sources */,
 				25C082A51F55795E00FDB253 /* WKAnchorGroup.swift in Sources */,
 				25652BA01F56C5940047A3CB /* WKCycleModel.swift in Sources */,
+				254A5EC51F5D2B8A006BE8A3 /* WKFunnyViewController.swift in Sources */,
 				25E3AE9B1F59665E008AA4F3 /* WKGameModel.swift in Sources */,
 				250917F71F50269C0007F398 /* UIBarButtonItem-Extension.swift in Sources */,
 				250D2C381F541E1E001E7C1C /* WKNormalCollectionViewCell.swift in Sources */,

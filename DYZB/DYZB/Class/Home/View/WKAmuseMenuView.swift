@@ -65,15 +65,11 @@ extension WKAmuseMenuView: UICollectionViewDataSource {
         let pageNumble = (anchorGroupModel!.count - 1) / 8 + 1
         
         pageControl.numberOfPages = pageNumble
-        if pageNumble == 0 {
+        if pageNumble == 1 {
             
-            pageControl.currentPageIndicatorTintColor = UIColor.white
-        }else {
-        
-            pageControl.currentPageIndicatorTintColor = UIColor.orange
+            pageControl.isHidden = true
         }
-        
-        
+
         return pageNumble
     }
     

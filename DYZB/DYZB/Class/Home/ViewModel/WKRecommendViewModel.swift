@@ -94,7 +94,7 @@ extension WKRecommendViewModel {
         disPathGroup.enter()
         
         //获取2-12组的数据  http://capi.douyucdn.cn/api/v1/getHotCate
-        self.loadAnchorData(urlStr: "http://capi.douyucdn.cn/api/v1/getHotCate", parame: parame) {
+        self.loadAnchorData(isanchorGroup: true, urlStr: "http://capi.douyucdn.cn/api/v1/getHotCate", parame: parame) {
             
             disPathGroup.leave()
         }

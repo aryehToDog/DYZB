@@ -17,7 +17,7 @@ class WKBaseAnchorViewModel: NSObject {
 
 extension WKBaseAnchorViewModel {
     
-    func loadAnchorData(urlStr: String ,parame: [String: Any]? ,finished: @escaping ()-> ()) {
+    func loadAnchorData(isanchorGroup: Bool,urlStr: String ,parame: [String: Any]? ,finished: @escaping ()-> ()) {
         
         WKNetworkTools.requestData(url: urlStr, type: .get, parame: parame) { (result) in
             
@@ -31,11 +31,29 @@ extension WKBaseAnchorViewModel {
                 return
             }
             
-            //字典转模型
-            for dict in dictArray{
+            if isanchorGroup == true {
+            
                 
-                self.modelArray.append(WKAnchorGroup(dict: dict))
+                //字典转模型
+                for dict in dictArray{
+                    
+                    self.modelArray.append(WKAnchorGroup(dict: dict))
+                }
+                
+            }else {
+            
+                //字典转模型
+                let groupM = WKAnchorGroup()
+                
+                for dict in dictArray{
+                    
+                    groupM.anchors.append(WKAnchorModel(dict: dict))
+                    
+                }
+                
+                self.modelArray.append(groupM)
             }
+
             
             finished()
         }

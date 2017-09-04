@@ -45,7 +45,6 @@ extension WKAmuseViewController {
         
         baseViewModel = amuseViewModel
         
-        
         amuseViewModel.loadAmuseData {
             
             var tempGroupModel = self.amuseViewModel.modelArray

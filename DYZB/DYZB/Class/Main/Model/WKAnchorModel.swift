@@ -37,7 +37,7 @@ class WKAnchorModel: NSObject {
     var icon_url : String = ""
     
     //字典转模型
-    init(dict: [String: NSObject]) {
+    init(dict: [String: Any]) {
         
         super.init()
         
