@@ -53,6 +53,8 @@ extension WKAmuseViewController {
             self.amuseMenuView.anchorGroupModel = tempGroupModel
             
             self.collectionView.reloadData()
+            
+            self.finishedCallBackEndAnimatin()
         }
     }
     

@@ -17,7 +17,7 @@ private let kGameViewH : CGFloat = 90
 private let gameViewCellID = "gameViewCellID"
 //private let kReusableView = "kReusableView"
 
-class WKGameViewController: UIViewController {
+class WKGameViewController: WKBaseViewController {
     
     //获取gameViewModel
     let gameViewModel: WKGameViewModel = WKGameViewModel()
@@ -75,11 +75,7 @@ class WKGameViewController: UIViewController {
         setupUI()
         
         setLoadData()
-        
-        
     }
-    
-    
 }
 
 extension WKGameViewController {
@@ -92,6 +88,9 @@ extension WKGameViewController {
             self.collectionView.reloadData()
             
             self.gameView.groupModel = Array(self.gameViewModel.gameModelArray[0..<10])
+            
+            //完成数据请求完毕的回调
+            self.finishedCallBackEndAnimatin()
         }
         
     }
@@ -99,7 +98,9 @@ extension WKGameViewController {
 
 extension WKGameViewController {
     
-    func setupUI() {
+    override func setupUI() {
+        
+        contentView = collectionView
         
         view.addSubview(collectionView)
         
@@ -110,6 +111,8 @@ extension WKGameViewController {
         collectionView.addSubview(gameView)
         
         collectionView.contentInset = UIEdgeInsets(top: kItemwGroupH + kGameViewH, left: 0, bottom: 0, right: 0)
+        
+        super.setupUI()
     }
     
 }

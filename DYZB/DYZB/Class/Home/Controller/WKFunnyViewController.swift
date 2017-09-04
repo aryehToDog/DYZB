@@ -45,6 +45,8 @@ extension WKFunnyViewController {
         
         funnyViewModel.loadFunnyData {
             self.collectionView.reloadData()
+            
+            self.finishedCallBackEndAnimatin()
         }
         
     }

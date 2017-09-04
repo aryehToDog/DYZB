@@ -34,6 +34,7 @@
 		250D2C3D1F542256001E7C1C /* WKPrettyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 250D2C3B1F542256001E7C1C /* WKPrettyCollectionViewCell.xib */; };
 		254A5EC51F5D2B8A006BE8A3 /* WKFunnyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254A5EC41F5D2B8A006BE8A3 /* WKFunnyViewController.swift */; };
 		254A5EC71F5D2C03006BE8A3 /* WKFunnyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254A5EC61F5D2C03006BE8A3 /* WKFunnyViewModel.swift */; };
+		254A5EC91F5D34D4006BE8A3 /* WKBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254A5EC81F5D34D4006BE8A3 /* WKBaseViewController.swift */; };
 		25652B981F56BCF00047A3CB /* WKCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25652B971F56BCF00047A3CB /* WKCycleView.swift */; };
 		25652B9A1F56BD170047A3CB /* WKCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25652B991F56BD170047A3CB /* WKCycleView.xib */; };
 		25652B9D1F56C3C10047A3CB /* WKCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25652B9B1F56C3C10047A3CB /* WKCycleCell.swift */; };
@@ -116,6 +117,7 @@
 		250D2C3B1F542256001E7C1C /* WKPrettyCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WKPrettyCollectionViewCell.xib; sourceTree = "<group>"; };
 		254A5EC41F5D2B8A006BE8A3 /* WKFunnyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKFunnyViewController.swift; sourceTree = "<group>"; };
 		254A5EC61F5D2C03006BE8A3 /* WKFunnyViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKFunnyViewModel.swift; sourceTree = "<group>"; };
+		254A5EC81F5D34D4006BE8A3 /* WKBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKBaseViewController.swift; sourceTree = "<group>"; };
 		25652B971F56BCF00047A3CB /* WKCycleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKCycleView.swift; sourceTree = "<group>"; };
 		25652B991F56BD170047A3CB /* WKCycleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WKCycleView.xib; sourceTree = "<group>"; };
 		25652B9B1F56C3C10047A3CB /* WKCycleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKCycleCell.swift; sourceTree = "<group>"; };
@@ -382,6 +384,7 @@
 			children = (
 				250917F11F500B870007F398 /* WKTabBarController.swift */,
 				25E3AEAB1F5B1874008AA4F3 /* WKBaseAnchorViewController.swift */,
+				254A5EC81F5D34D4006BE8A3 /* WKBaseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -858,6 +861,7 @@
 				250917F21F500B870007F398 /* WKTabBarController.swift in Sources */,
 				25E3AEAE1F5B2692008AA4F3 /* WKAmuseMenuView.swift in Sources */,
 				250917FF1F51D60D0007F398 /* UIColor+Extension.swift in Sources */,
+				254A5EC91F5D34D4006BE8A3 /* WKBaseViewController.swift in Sources */,
 				25E3AEB31F5B2ACC008AA4F3 /* WKAmuseMenuViewCell.swift in Sources */,
 				25C082A91F559D0700FDB253 /* WKBaseCollectionViewCell.swift in Sources */,
 			);

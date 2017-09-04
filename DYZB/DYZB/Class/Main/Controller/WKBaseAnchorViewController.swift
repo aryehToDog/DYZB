@@ -23,7 +23,7 @@ let kItemwW: CGFloat = (WKWidth - 3 * kItemwMaragin) * 0.5
 let kNormalItemH: CGFloat = kItemwW * (3 / 4)
 let kPerttyItemH: CGFloat = kItemwW * (4 / 3)
 
-class WKBaseAnchorViewController: UIViewController {
+class WKBaseAnchorViewController: WKBaseViewController {
     
     var baseViewModel: WKBaseAnchorViewModel!
     
@@ -68,9 +68,12 @@ class WKBaseAnchorViewController: UIViewController {
 
 extension WKBaseAnchorViewController {
     
-    func setupUI() {
+    override func setupUI() {
         
+        contentView = collectionView
         view.addSubview(collectionView)
+        
+        super.setupUI()
     }
 }
 

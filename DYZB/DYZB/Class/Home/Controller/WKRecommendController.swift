@@ -72,6 +72,8 @@ extension WKRecommendController {
             anchorGroup.append(groupLastM)
             
             self.gameView.groupModel = anchorGroup
+            
+            self.finishedCallBackEndAnimatin()
         }
         
         recommerndVM.loadCycleData {
@@ -79,6 +81,8 @@ extension WKRecommendController {
             //发送网络请求
             self.cycleView.cycleModel = self.recommerndVM.cycleModel
         }
+        
+        
         
     }
     
